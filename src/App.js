@@ -87,8 +87,8 @@ function App() {
         }}>
 
           {/* LEFT */}
-          <div style={{ display: "flex", alignItems: "center", gap: "30px" }}>
-            <h2 style={{ fontWeight: "400", fontSize: "18px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+            <h2 style={{ fontWeight: "400", fontSize: window.innerWidth < 768 ? "14px" : "18px"}}>
               Eashwar Jayanth Yadav
             </h2>
 
@@ -140,13 +140,17 @@ function App() {
         height: "100vh",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-around",
-        paddingTop: "80px",
+        flexDirection: window.innerWidth < 768 ? "column" : "row",
+justifyContent: "center",
+textAlign: window.innerWidth < 768 ? "center" : "left",
+padding: "40px 20px",
+        
       }}>
         <div
   style={{
-    width: "300px",
-    height: "300px",
+    width: window.innerWidth < 768 ? "200px" : "300px",
+height: window.innerWidth < 768 ? "200px" : "300px",
+marginBottom: "20px",
     borderRadius: "50%",
     background: "radial-gradient(circle, #64ffda, transparent)",
     animation: "pulse 3s infinite ease-in-out",
@@ -210,15 +214,16 @@ function App() {
     color: "#ccc",
   }}
 >
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      gap: "80px",
-      maxWidth: "1000px",
-      width: "100%",
-    }}
-  >
+<div
+  style={{
+    display: "flex",
+    flexDirection: window.innerWidth < 768 ? "column" : "row",
+    alignItems: "center",
+    gap: "20px",
+    maxWidth: "1000px",
+    width: "100%",
+  }}
+>
     {/* LEFT TEXT */}
     <div style={{ flex: 1 }}>
       <h2 style={{ fontSize: "32px", color: "white", marginBottom: "20px" }}>
@@ -272,8 +277,9 @@ function App() {
         src={profile}
         alt="profile"
         style={{
-          width: "260px",
-          borderRadius: "12px",
+          width: window.innerWidth < 768 ? "100%" : "260px",
+height: "auto",
+borderRadius: "12px",
         }}
       />
     </div>
@@ -283,7 +289,7 @@ function App() {
       {/* PROJECTS */}
       <div id="projects" className="reveal" style={{
   minHeight: "100vh",
-  padding: "100px 120px",
+  padding: window.innerWidth < 768 ? "60px 20px" : "100px 120px",
   color: "#ccc",
   backgroundColor: "#0a0a0a", 
 }}>
@@ -291,7 +297,7 @@ function App() {
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "1fr 1fr",
           gap: "25px",
         }}>
 
