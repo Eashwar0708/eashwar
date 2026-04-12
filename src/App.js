@@ -141,7 +141,8 @@ function App() {
         display: "flex",
         alignItems: "center",
         flexDirection: window.innerWidth < 768 ? "column" : "row",
-justifyContent: "center",
+        justifyContent: "center",
+        gap: window.innerWidth < 768 ? "20px" : "100px",
 textAlign: window.innerWidth < 768 ? "center" : "left",
 padding: "40px 20px",
         
